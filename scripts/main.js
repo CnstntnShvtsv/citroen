@@ -101,9 +101,17 @@ $('.open-popup-offer').click(function () {
 
 // Pop-Up "Спасибо за обращение!"
 $('.open-popup-thanx').click(function () {
+    $('#popup-callback').fadeOut();
+    $('#popup-offer').fadeOut();
+
     $('#popup-thanx').fadeIn();
     $('#popup-thanx').addClass('disabled');
     // $('body').css('overflow', 'hidden');
+});
+
+$('#popup-thanx .btn-gold').click(function () {
+    $('.popup-bg').fadeOut();
+    // $('body').css('overflow', 'auto');
 });
 
 // закрыть на крестик
@@ -119,4 +127,67 @@ $(document).mouseup(function (e) {
         $('.popup-bg').fadeOut();
         // $('body').css('overflow', 'auto');
     }
+});
+
+// MAIN-CARS меню переключения вкладок
+$(document).ready(function () {
+    $('#btn-set-of-cars-01').click(function () {
+        $('.item-header .link').removeClass('active')
+        $(this).toggleClass('active')
+        $('#set-of-cars-01').toggleClass('hide')
+        $('#set-of-cars-01').toggleClass('show')
+
+        $('#set-of-cars-02, #set-of-cars-03, #set-of-cars-04, #set-of-cars-05, #set-of-cars-06').removeClass('show')
+        $('#set-of-cars-02, #set-of-cars-03, #set-of-cars-04, #set-of-cars-05, #set-of-cars-06').addClass('hide')
+    })
+
+    $('#btn-set-of-cars-02').click(function () {
+        $('.item-header .link').removeClass('active')
+        $(this).toggleClass('active')
+        $('#set-of-cars-02').toggleClass('hide')
+        $('#set-of-cars-02').toggleClass('show')
+
+        $('#set-of-cars-01, #set-of-cars-03, #set-of-cars-04, #set-of-cars-05, #set-of-cars-06').removeClass('show')
+        $('#set-of-cars-01, #set-of-cars-03, #set-of-cars-04, #set-of-cars-05, #set-of-cars-06').addClass('hide')
+    })
+
+    $('#btn-set-of-cars-03').click(function () {
+        $('.item-header .link').removeClass('active')
+        $(this).toggleClass('active')
+        $('#set-of-cars-03').toggleClass('hide')
+        $('#set-of-cars-03').toggleClass('show')
+
+        $('#set-of-cars-01, #set-of-cars-02, #set-of-cars-04, #set-of-cars-05, #set-of-cars-06').removeClass('show')
+        $('#set-of-cars-01, #set-of-cars-02, #set-of-cars-04, #set-of-cars-05, #set-of-cars-06').addClass('hide')
+    })
+
+    $('#btn-set-of-cars-04').click(function () {
+        $('.item-header .link').removeClass('active')
+        $(this).toggleClass('active')
+        $('#set-of-cars-04').toggleClass('hide')
+        $('#set-of-cars-04').toggleClass('show')
+
+        $('#set-of-cars-01, #set-of-cars-02, #set-of-cars-03, #set-of-cars-05, #set-of-cars-06').removeClass('show')
+        $('#set-of-cars-01, #set-of-cars-02, #set-of-cars-03, #set-of-cars-05, #set-of-cars-06').addClass('hide')
+    })
+
+    $('#btn-set-of-cars-05').click(function () {
+        $('.item-header .link').removeClass('active')
+        $(this).toggleClass('active')
+        $('#set-of-cars-05').toggleClass('hide')
+        $('#set-of-cars-05').toggleClass('show')
+
+        $('#set-of-cars-01, #set-of-cars-02, #set-of-cars-03, #set-of-cars-04, #set-of-cars-06').removeClass('show')
+        $('#set-of-cars-01, #set-of-cars-02, #set-of-cars-03, #set-of-cars-04, #set-of-cars-06').addClass('hide')
+    })
+
+    $('#btn-set-of-cars-06').click(function () {
+        $('.item-header .link').removeClass('active')
+        $(this).toggleClass('active')
+        $('#set-of-cars-06').toggleClass('hide')
+        $('#set-of-cars-06').toggleClass('show')
+
+        $('#set-of-cars-01, #set-of-cars-02, #set-of-cars-03, #set-of-cars-04, #set-of-cars-05').removeClass('show')
+        $('#set-of-cars-01, #set-of-cars-02, #set-of-cars-03, #set-of-cars-04, #set-of-cars-05').addClass('hide')
+    })
 });

@@ -27,6 +27,7 @@ span {
 }
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 a,
 a::before,
@@ -173,6 +174,83 @@ input + input[type=submit],
 .select + input[type=submit] {
   margin-top: 24px;
 }
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 4px solid #796f6e;
+  height: 32px;
+  width: 32px;
+  background-color: #f9f9f9;
+  background-image: url("../images/btn-slider_arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+  margin-top: -14px;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  border: 4px solid #796f6e;
+  height: 32px;
+  width: 32px;
+  background-color: #f9f9f9;
+  background-image: url("../images/btn-slider_arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  border: 4px solid #796f6e;
+  height: 32px;
+  width: 32px;
+  background-color: #f9f9f9;
+  background-image: url("../images/btn-slider_arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background-color: #a19a99;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background-color: #796f6e;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background-color: #a19a99;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: transparent;
+}
 .slick-dotted.slick-slider {
   margin-bottom: 0;
 }
@@ -308,6 +386,9 @@ input + input[type=submit],
   height: 100%;
   background: #555 url("../images/tail-spin.svg") center center no-repeat;
   background-size: 48px;
+}
+form {
+  width: 100%;
 }
 .form {
   background-color: #fff;
@@ -641,6 +722,7 @@ input + input[type=submit],
   font-weight: 700;
   line-height: 40px;
   white-space: nowrap;
+  cursor: pointer;
   position: relative;
 }
 .items .item-header nav .link:hover,
@@ -683,6 +765,22 @@ input + input[type=submit],
 }
 .items .item-header nav .link.special {
   color: #eb6428;
+}
+.items #set-of-cars-01.hide,
+.items #set-of-cars-02.hide,
+.items #set-of-cars-03.hide,
+.items #set-of-cars-04.hide,
+.items #set-of-cars-05.hide,
+.items #set-of-cars-06.hide {
+  display: none;
+}
+.items #set-of-cars-01.show,
+.items #set-of-cars-02.show,
+.items #set-of-cars-03.show,
+.items #set-of-cars-04.show,
+.items #set-of-cars-05.show,
+.items #set-of-cars-06.show {
+  display: block;
 }
 .items .item-car {
   padding: 32px 0;
@@ -782,6 +880,91 @@ input + input[type=submit],
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+#leasing-vol-02 {
+  display: none;
+}
+.leasing-vol-02-items {
+  display: grid;
+  grid-template-areas: "a . c" "b . c";
+  grid-template-columns: minmax(auto, 648px) 1fr minmax(auto, 536px);
+  grid-gap: 24px 12px;
+  grid-template-rows: auto;
+  justify-items: flex-start;
+  align-items: flex-start;
+  padding: 88px 0;
+  border-bottom: 1px solid #e4e2e2;
+}
+.leasing-vol-02-items h2 {
+  grid-area: a;
+}
+.leasing-vol-02-items .item-form {
+  grid-area: b;
+  width: 100%;
+  max-width: 648px;
+}
+.leasing-vol-02-items .item-form h3 {
+  margin-top: 16px;
+}
+.leasing-vol-02-items .item-form .slider {
+  margin-top: 40px;
+}
+.leasing-vol-02-items .item-form .slider h3 {
+  margin-bottom: 12px;
+}
+.leasing-vol-02-items .item-form .slider .min-max {
+  padding-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.leasing-vol-02-items .item-form p {
+  color: #a19a99;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 12px;
+}
+.leasing-vol-02-items .item-form form {
+  padding-right: 0;
+}
+.leasing-vol-02-items .item-right-part {
+  grid-area: c;
+  width: 100%;
+  max-width: 536px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.leasing-vol-02-items .item-right-part .item-img {
+  width: 100%;
+  max-width: 760px;
+  height: 400px;
+  background-image: url("../images/lg-01.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.leasing-vol-02-items .item-right-part h3 {
+  font-size: 32px;
+  margin: 24px 0;
+}
+.leasing-vol-02-items .item-right-part h3 span {
+  font-weight: 700;
+  color: #b48f6d;
+}
+.leasing-vol-02-items .item-right-part form {
+  width: 100%;
+  max-width: 312px;
+}
+.leasing-vol-02-items .item-right-part .form-text {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 12px 0;
 }
 .trade-in-items {
   display: grid;
@@ -900,6 +1083,11 @@ input + input[type=submit],
 .main-map iframe {
   width: 100%;
   height: 588px;
+}
+.footer p {
+  padding: 24px 0;
+  font-size: 12px;
+  line-height: 16px;
 }
 .footer-items {
   padding: 24px 0;
@@ -1101,6 +1289,9 @@ input + input[type=submit],
   .leasing-items {
     padding: 44px 0;
   }
+  .leasing-vol-02-items {
+    padding: 44px 0;
+  }
   .trade-in-items {
     display: grid;
     grid-template-areas: "a a" "b d" "c d";
@@ -1230,8 +1421,42 @@ input + input[type=submit],
   .leasing-items .item-form {
     margin-top: 24px;
   }
+  .leasing-items .item-form form {
+    padding-right: 0;
+  }
   .leasing-items .item-img {
     height: 328px;
+  }
+  .leasing-vol-02-items {
+    display: grid;
+    grid-template-areas: "a" "c" "b";
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
+    grid-template-rows: auto;
+    justify-items: flex-start;
+    align-items: flex-start;
+  }
+  .leasing-vol-02-items .item-form {
+    max-width: 720px;
+    justify-self: center;
+  }
+  .leasing-vol-02-items .item-form .slider {
+    margin-top: 24px;
+  }
+  .leasing-vol-02-items .item-right-part {
+    max-width: 720px;
+  }
+  .leasing-vol-02-items .item-right-part .item-img {
+    height: 328px;
+  }
+  .leasing-vol-02-items .item-right-part h3 {
+    display: none;
+  }
+  .leasing-vol-02-items .item-right-part form {
+    display: none;
+  }
+  .leasing-vol-02-items .item-right-part .form-text {
+    display: none;
   }
   .trade-in-items {
     display: grid;
@@ -1395,6 +1620,9 @@ input + input[type=submit],
     text-align: center;
   }
   .leasing-items .item-img {
+    height: 256px;
+  }
+  .leasing-vol-02-items .item-right-part .item-img {
     height: 256px;
   }
   .trade-in-items .item-img {
