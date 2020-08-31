@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="hellopreloader">
+        <div id="hellopreloader_preload"></div>
+    </div>
+    <script type="text/javascript">
+        var hellopreloader = document.getElementById("hellopreloader_preload");
+
+        function fadeOutnojquery(el) {
+            el.style.opacity = 1;
+            var interhellopreloader = setInterval(function () {
+                el.style.opacity = el.style.opacity - 0.05;
+                if (el.style.opacity <= 0.05) {
+                    clearInterval(interhellopreloader);
+                    hellopreloader.style.display = "none";
+                }
+            }, 16);
+        }
+        window.onload = function () {
+            setTimeout(function () {
+                fadeOutnojquery(hellopreloader);
+            }, 500); // Время прелоадера 0.5s
+        };
+    </script>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-info">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="логотип">
+                    <div class="title">
+                        <span class="txt-500">Название дилера</span> <br>
+                        <span class="txt-300 txt-pale">Официальный дилер Citroen</span>
+                    </div>
+                </div>
+
+                <div class="collapse">
+                    <div class="address">
+                        Санкт-Петербург, <br>
+                        Московский проспект, д. 154
+                    </div>
+
+                    <div class="contacts">
+                        <span class="txt-500">+7 812 561-08-44</span> <br>
+                        <span class="txt-300 txt-pale">Ежедневно с 10 до 20</span>
+                    </div>
+                    <div class="callback open-popup-callback">
+                        <a class="btn-orange" type="button">Обратный звонок</a>
+                    </div>
+                </div>
+
+                <div class="btn-toggle">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar-nav">
+                <a class="nav-link" href="#special-offers">Спецпредложения</a>
+                <a class="nav-link active" href="#cars-in-stock">Авто в наличии</a>
+                <a class="nav-link" href="#leasing">Кредитные программы/лизинг</a>
+                <a class="nav-link" href="#trade-in">Trade-In</a>
+                <a class="nav-link" href="#contacts">Контакты</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- POP-UPS -->
+    <!-- Pop-Up "Обратный звонок" -->
+    <div class="popup-bg" id="popup-callback">
+        <div class="popup form">
+            <h3>Обратный звонок</h3>
+            <form action="URL" method="GET">
+                <input type="text" placeholder="Имя">
+                <input type="tel" placeholder="Телефон">
+                <input class="btn-gold" type="submit" value="Оставить заявку">
+            </form>
+            <p>Отправля форму вы соглашаетесь на обработку персональных данных</p>
+
+            <div class="close-popup">
+                <span>X</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop-Up "Получить предложение" -->
+    <div class="popup-bg" id="popup-offer">
+        <div class="popup form">
+            <h3>Получить предложение</h3>
+            <form action="URL" method="GET">
+                <input type="text" placeholder="Имя">
+                <input type="tel" placeholder="Телефон">
+                <input class="btn-gold" type="submit" value="Оставить заявку">
+            </form>
+            <p>Отправля форму вы соглашаетесь на обработку персональных данных</p>
+
+            <div class="close-popup">
+                <span>X</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop-Up "Спасибо за обращение!" -->
+    <div class="popup-bg" id="popup-thanx">
+        <div class="popup form">
+            <h3>Спасибо за обращение!</h3>
+            <span class="thanx-txt">
+                Мы свяжемся с вами в ближайшее время.
+            </span>
+            <form action="URL" method="GET">
+                <input class="btn-gold" type="submit" value="Закрыть">
+            </form>
+            <p>Отправля форму вы соглашаетесь на обработку персональных данных</p>
+
+            <div class="close-popup">
+                <span>X</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="main-slider">
+            <div class="back-part">
+                <div class="slide slide-01">
+                    <div class="black-overlay"></div>
+                </div>
+                <div class="slide slide-02">
+                    <div class="black-overlay"></div>
+                </div>
+                <div class="slide slide-03">
+                    <div class="black-overlay"></div>
+                </div>
+            </div>
+
+            <div class="front-part container">
+                <div class="part-left">
+                    <h2>
+                        <span>Обновленный Т6.1</span> <br>
+                        уже в продаже!
+                    </h2>
+                </div>
+                <div class="part-right form">
+                    <h3>Получить выгоду</h3>
+                    <form action="URL" method="GET">
+                        <input type="tel" placeholder="Ваш телефон">
+                        <input class="btn-gold" type="submit" value="Получить выгодные условия">
+                    </form>
+                    <p>Отправля форму вы соглашаетесь на обработку персональных данных</p>
+                </div>
+            </div>
+
+            <div class="slider-btns container">
+                <div class="btn-prev"></div>
+                <div class="btn-next"></div>
+            </div>
+        </div>
+
+        <div class="main-service">
+            <div class="container">
+                <div class="service-items">
+                    <div class="item">
+                        <a href="#">
+                            <img src="images/icon_01-citroen.svg">
+                        </a>
+                        <h4>Большой выбор авто <br>
+                            <span>в наличии</span>
+                        </h4>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="images/icon_02-gear.svg">
+                        </a>
+                        <h4>Официальный <br>
+                            <span>сервисный центр</span>
+                        </h4>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="images/icon_03-card.svg">
+                        </a>
+                        <h4>Льготный <br>
+                            <span>кредит</span>
+                        </h4>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="images/icon_04-recycle.svg">
+                        </a>
+                        <h4>Обмен по Trade-In <br>
+                            <span>с преимуществом</span>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-cars" id="cars-in-stock">
+            <div class="container">
+                <div class="items">
+                    <div class="item-header">
+                        <h2>Автомобили <span>в наличии</span></h2>
+                        <nav>
+                            <a class="link" href="#">Citroen Jumper</a>
+                            <a class="link active" href="#">Новый Citroen Jumpy</a>
+                            <a class="link" href="#">Citroen SpaceTourer Business Lounge</a>
+                            <a class="link" href="#">Citroen SpaceTourer</a>
+                            <a class="link" href="#">Citroen SpaceTourer 4x4</a>
+                            <a class="link special" href="#">Спецпредложение</a>
+                        </nav>
+                    </div>
+
+                    <div class="item-car">
+                        <div class="car-img">
+                            <img src="images/md-01.jpg">
+                        </div>
+                        <div class="car-info">
+                            <h3>Citroen Jumper</h3>
+                            <span>АКПП-6, передний привод, бензин, 1,2&nbsp;л (110 л.с.)</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price-old">от 1 125 500 руб.</span>
+                            <span class="price">от 1 125 500 руб.</span>
+                            <a class="btn-orange" href="#">Купить</a>
+                        </div>
+                    </div>
+                    <div class="item-car">
+                        <div class="car-img">
+                            <img src="images/md-02.jpg">
+                        </div>
+                        <div class="car-info">
+                            <h3>Новый Citroen Jumper</h3>
+                            <span>АКПП-6, передний привод, бензин, 1,2&nbsp;л (110 л.с.)</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price-old">от 1 125 500 руб.</span>
+                            <span class="price">от 1 125 500 руб.</span>
+                            <a class="btn-orange" href="#">Купить</a>
+                        </div>
+                    </div>
+                    <div class="item-car">
+                        <div class="car-img">
+                            <img src="images/md-03.jpg">
+                        </div>
+                        <div class="car-info">
+                            <h3>Citroen SpaceTourer</h3>
+                            <span>АКПП-6, передний привод, бензин, 1,2&nbsp;л (110 л.с.)</span>
+                        </div>
+                        <div class="car-price">
+                            <span class="price-old">от 1 125 500 руб.</span>
+                            <span class="price">от 1 125 500 руб.</span>
+                            <a class="btn-orange" href="#">Купить</a>
+                        </div>
+                    </div>
+
+                    <div class="show-more">
+                        <a class="btn-gold-frame" href="#" type="button">Смотреть все</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-leasing" id="leasing">
+            <div class="container">
+                <div class="leasing-items">
+                    <div class="item-form">
+                        <h2>Пользуйся сейчас<span>, <br>
+                                плати потом</span>
+                        </h2>
+                        <p class="form-text">Содействуем в получении кредита <br>
+                            Одобрение в 99% случаев</p>
+                        <form action="URL" method="GET">
+                            <input type="text" placeholder="Имя">
+                            <input type="tel" placeholder="Телефон">
+                            <input class="btn-gold" type="submit" value="Заявка на расчет кредита">
+                        </form>
+                        <p>Отправля форму вы соглашаетесь на обработку персональных данных</p>
+                    </div>
+                    <div class="item-img"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-trade-in" id="trade-in">
+            <div class="container">
+                <div class="trade-in-items">
+                    <div class="item-img"></div>
+                    <h2><span>Программа</span> TRADE-IN</h2>
+                    <p class="form-text">Программа Trade-In <br>
+                        позволяет купить новый автомобиль в обмен на Ваш
+                        прежний автомобиль с доплатой. Не нужно ждать пока продастся Ваш автомобиль, сразу можно
+                        уехать из автосалона на желанном авто.</p>
+                    <div class="item-form">
+                        <form action="URL" method="GET">
+                            <select>
+                                <option>Ваш телефон</option>
+                                <option>+7 987 654 32 10</option>
+                            </select>
+                            <select>
+                                <option>Год</option>
+                                <option>2010</option>
+                                <option>2015</option>
+                                <option>2020</option>
+                            </select>
+                            <select>
+                                <option>Модель</option>
+                                <option>№01</option>
+                            </select>
+                            <input type="tel" placeholder="Укажите телефон">
+                            <input class="btn-gold" type="submit" value="Заказать звонок">
+                        </form>
+                        <p>Отправля форму вы соглашаетесь на обработку персональных данных</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-call-us" id="contacts">
+            <div class="container">
+                <div class="call-us-items">
+                    <div class="item-img"></div>
+                    <h2>Позвоните нам <br>
+                        <span class="gold-number">+7 812 561-08-44</span> <br>
+                        <span>или оставьте заявку</span>
+                    </h2>
+                    <div class="item-checkbox">
+                        <form action="URL" method="GET">
+                            <label class="wrapper">Запрос цены
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="wrapper">Оценка авто в трейд-ин
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="wrapper">Запись на тест-драйв
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="wrapper">Запрос рассчета страховки
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="wrapper">Заявка на кредит
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </form>
+                    </div>
+                    <div class="item-form">
+                        <form action="URL" method="GET">
+                            <input type="text" placeholder="Имя">
+                            <input type="tel" placeholder="Телефон">
+                            <input class="btn-gold" type="submit" value="Заявка на расчет кредита">
+                        </form>
+                        <p>Отправля форму вы соглашаетесь на обработку персональных данных</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="map-address">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="логотип">
+                </div>
+
+                <div class="title">
+                    <span class="txt-500">Название дилера</span> <br>
+                    <span class="txt-300 txt-pale">Официальный дилер Citroen</span>
+                </div>
+
+                <div class="address">
+                    Санкт-Петербург, <br>
+                    Московский проспект, д. 154
+                </div>
+
+                <div class="contacts">
+                    <span class="txt-500">+7 812 561-08-44</span> <br>
+                    <span class="txt-300 txt-pale">Ежедневно с 10 до 20</span>
+                </div>
+
+                <div class="callback open-popup-callback">
+                    <a class="btn-orange" type="button">Обратный звонок</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-map">
+            <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aae444508543c47df0c3f786985e6a99a71f98a1cf17dde9a22d1ab6cd76786e3&amp;width=720&amp;height=294&amp;lang=ru_RU&amp;scroll=true"></script> -->
+            <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3Aae444508543c47df0c3f786985e6a99a71f98a1cf17dde9a22d1ab6cd76786e3&amp;source=constructor"
+                width="720" height="294" frameborder="0"></iframe>
+
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-items">
+                <div class="item-left txt-pale">©2020 AUDI Все права защищены</div>
+                <div class="item-right">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Юридический дисклеймер</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/jquery-1.12.4.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="scripts/select.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
